@@ -1,0 +1,90 @@
+	%import packages%
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{wrapfig, subcaption, setspace, booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{fourier}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+\usepackage{tgbonum}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+\usepackage{endnotes}
+\renewcommand{\footnote}[1]{\endnote{#1}}
+\renewcommand{\theendnote}{}
+\let\cleardoublepage\clearpage
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\onehalfspacing
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+
+	%page de couverture%
+\begin{document}
+\begin{figure}[t]
+	\includegraphics[width=4cm]{./images/logoesiee.png}
+	\hfill
+	\includegraphics[width=4cm]{./images/cnrs.png}	
+\end{figure}
+
+\fontfamily{cmr} \selectfont
+\title{ \normalsize \textsc{}
+	\\ [2.0cm]
+	\HRule{0.5pt} \\
+	\LARGE \textbf{\uppercase{Rapport de stage}
+	\HRule{2pt} \\ [0.5cm]
+	\normalsize  \vspace*{5\baselineskip}}
+}
+
+\date{Du 1 au 26 Juillet 2019}
+
+\author{
+	Théo PERESSE-GOURBIL\\ 
+	ESIEE Paris \\
+	Rapport de stage de fin de E1 }
+\maketitle
+
+
+\newpage
+\section{Introduction}
+\input{intro.tex}
+\newpage
+
+\tableofcontents
+\smallbreak
+% \vspace{1\baselineskip}
+
+\centerline{\textbf{Lien GitHub pour les sources LaTex:} \textcolor{blue}{\url{https://github.com/blackjack-nix/stage_E1}}}
+
+\newpage
+
+\sectionfont{\scshape}
+
+	%pages de texte%
+	
+\section{Présentation de l'entreprise}
+\input{entreprise.tex}
+\newpage
+
+
+\section{Travail effectué}
+\input{travail.tex}
+\newpage
+
+\section{Bilan personnel et professionnel : \\  Secteur d'activité}
+\input{bilan.tex}
+\newpage
+\section{Annexes et bibliographie}
+\input{annexes.tex}
+
+\end{document}
